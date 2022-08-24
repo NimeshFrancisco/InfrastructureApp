@@ -14,9 +14,9 @@ namespace Model.Mappers
         {
             return new Product
             {
-                ProductId = record.GetValueOrDefault<int>("Dealer_Code"),
-                ProductName = record.GetValueOrDefault<string>("Zone"),
-                AddDate = record.GetValueOrDefault<DateTime?>("Sal_District"),
+                ProductId = record.GetValueOrDefault<int>("Id"),
+                ProductName = record.GetValueOrDefault<string>("ProductName"),
+                AddDate = record.GetValueOrDefault<DateTime?>("AddDate"),
 
 
             };
