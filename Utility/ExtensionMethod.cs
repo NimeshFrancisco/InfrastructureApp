@@ -29,57 +29,9 @@ namespace Utility
             return (T)(row.IsDBNull(ordinal) ? default(T) : row.GetValue(ordinal));
         }
 
-        //public static string AbsoluteAction(
-        //    this UrlHelper url,
-        //    string actionName,
-        //    string controllerName,
-        //    object routeValues = null
-        //)
-        //{
-        //    var httpContext = url.RequestContext.HttpContext;
-        //    string scheme = httpContext.Request.Url.Scheme;
-
-        //    return url.Action(
-        //        actionName,
-        //        controllerName,
-        //        routeValues,
-        //        scheme
-        //    );
-        //}
+       
     }
 
-    //public static class MarkerAttributeExtensions
-    //{
-    //    public static bool HasMarkerAttribute<T>(this AuthorizationContext that)
-    //    {
-    //        return that.Controller.HasMarkerAttribute<T>()
-    //            || that.ActionDescriptor.HasMarkerAttribute<T>();
-    //    }
-
-    //    public static bool HasMarkerAttribute<T>(this ControllerBase that)
-    //    {
-    //        return that.GetType().HasMarkerAttribute<T>();
-    //    }
-
-    //    public static bool HasMarkerAttribute<T>(this Type that)
-    //    {
-    //        return that.IsDefined(typeof(T), false);
-    //    }
-
-    //    public static IEnumerable<T> GetCustomAttributes<T>(this Type that)
-    //    {
-    //        return that.GetCustomAttributes(typeof(T), false).Cast<T>();
-    //    }
-
-    //    public static bool HasMarkerAttribute<T>(this ActionDescriptor that)
-    //    {
-    //        return that.IsDefined(typeof(T), false);
-    //    }
-
-    //    public static IEnumerable<T> GetCustomAttributes<T>(this ActionDescriptor that)
-    //    {
-    //        return that.GetCustomAttributes(typeof(T), false).Cast<T>();
-    //    }
-    //}
+   
 }
 

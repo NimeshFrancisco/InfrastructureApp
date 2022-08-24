@@ -1,5 +1,6 @@
 ﻿using System;
 using Model.Entity;
+using Model.Mappers;
 using Data.Interfaces;
 using System.Data;
 using System.Transactions;
@@ -113,7 +114,7 @@ namespace Domain.Services
 
                     _productrepository = RepositoryFactory.Product(connection);
                     DataTable table = _productrepository.GetById(id);
-                    product =  Product.MapEntityToData(table);
+                    product =  ProductDataMapper.MapEntityToData(table);
 
                     scope.Complete();
                 }
@@ -155,7 +156,7 @@ namespace Domain.Services
 
                     _productrepository = RepositoryFactory.Product(connection);
                     DataTable table = _productrepository.GetList();
-                    products = Product.MapEntityToDatas(table);
+                    products = ProductDataMapper.MapEntityToDatas(table);
 
                     scope.Complete();
                 }

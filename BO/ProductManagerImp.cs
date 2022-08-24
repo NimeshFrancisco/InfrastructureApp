@@ -4,6 +4,7 @@ using BO.Interfaces;
 using Model.Entity;
 using System.Collections.Generic;
 using Domain.Interfaces;
+using Model.Mappers;
 
 namespace BO
 {
@@ -19,7 +20,7 @@ namespace BO
         {
             try
             {
-                var entity = product.MapEntity();
+                var entity =new ProductDTOMapper().MapEntity();
                 _productService.Create(entity);
             }
             catch (Exception ex)
@@ -45,7 +46,7 @@ namespace BO
         {
             try
             {
-               return _productService.GetById(id).MapToDTO();
+               return ProductDTOMapper.MapToDTO(_productService.GetById(id));
             }
             catch (Exception ex)
             {
@@ -57,7 +58,7 @@ namespace BO
         {
             try
             {
-               return Product.MapToDTO(_productService.GetList());
+               return ProductDTOMapper.MapToDTO(_productService.GetList());
             }
             catch (Exception ex)
             {
@@ -69,7 +70,7 @@ namespace BO
         {
             try
             {
-                var entity = product.MapEntity();
+                var entity = new ProductDTOMapper().MapEntity();
                 _productService.Update(entity);
             }
             catch (Exception ex)
