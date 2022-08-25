@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Utility
 {
-    public static class ExtensionMethod
+    public static class Extensions
     {
         public static T GetPropertyValue<T>(this object obj, string propName)
         {
