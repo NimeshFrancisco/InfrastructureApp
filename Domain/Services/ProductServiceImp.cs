@@ -42,17 +42,9 @@ namespace Domain.Services
                     scope.Complete();
                 }
             }
-            catch (TransactionAbortedException ex)
-            {
-                // log
-            }
-            catch (ApplicationException ex)
-            {
-                // log
-            }
             catch (Exception ex)
             {
-                // log
+                
             }
             finally
             {
@@ -79,17 +71,9 @@ namespace Domain.Services
                     scope.Complete();
                 }
             }
-            catch (TransactionAbortedException ex)
-            {
-                // log
-            }
-            catch (ApplicationException ex)
-            {
-                // log
-            }
             catch (Exception ex)
             {
-                // log
+               
             }
             finally
             {
@@ -119,17 +103,9 @@ namespace Domain.Services
                     scope.Complete();
                 }
             }
-            catch (TransactionAbortedException ex)
-            {
-                // log
-            }
-            catch (ApplicationException ex)
-            {
-                // log
-            }
             catch (Exception ex)
             {
-                // log
+                
             }
             finally
             {
@@ -161,17 +137,9 @@ namespace Domain.Services
                     scope.Complete();
                 }
             }
-            catch (TransactionAbortedException ex)
-            {
-                // log
-            }
-            catch (ApplicationException ex)
-            {
-                // log
-            }
             catch (Exception ex)
             {
-                // log
+               
             }
             finally
             {
@@ -202,17 +170,9 @@ namespace Domain.Services
                     scope.Complete();
                 }
             }
-            catch (TransactionAbortedException ex)
-            {
-                // log
-            }
-            catch (ApplicationException ex)
-            {
-                // log
-            }
             catch (Exception ex)
             {
-                // log
+              
             }
             finally
             {

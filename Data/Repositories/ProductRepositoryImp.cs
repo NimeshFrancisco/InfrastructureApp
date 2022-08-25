@@ -21,7 +21,7 @@ namespace Data.Repositories
         {
             using (SqlCommand cmd = new SqlCommand("Create_Product", _openedSqlConnection))
             {
-                cmd.CommandTimeout = 300; // secs
+                cmd.CommandTimeout = 300; 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ProductName", (object)product.ProductName ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@AddDate", (object)product.AddDate ?? DBNull.Value);
@@ -34,7 +34,7 @@ namespace Data.Repositories
             
             using (SqlCommand cmd = new SqlCommand("Delete_Product", _openedSqlConnection))
             {
-                cmd.CommandTimeout = 300; // secs
+                cmd.CommandTimeout = 300; 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", (object)id ?? DBNull.Value);
                  
@@ -47,7 +47,7 @@ namespace Data.Repositories
             DataTable table = null;
             using (SqlCommand cmd = new SqlCommand("Sreach_Product", _openedSqlConnection))
             {
-                cmd.CommandTimeout = 300; // secs
+                cmd.CommandTimeout = 300;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", (object)id ?? DBNull.Value);
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -64,7 +64,7 @@ namespace Data.Repositories
             DataTable table = null;
             using (SqlCommand cmd = new SqlCommand("Sreach_Product", _openedSqlConnection))
             {
-                cmd.CommandTimeout = 300; // secs
+                cmd.CommandTimeout = 300; 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", (object)0?? DBNull.Value);
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -80,7 +80,7 @@ namespace Data.Repositories
         {
             using (SqlCommand cmd = new SqlCommand("Update_Product", _openedSqlConnection))
             {
-                cmd.CommandTimeout = 300; // secs
+                cmd.CommandTimeout = 300; 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", (object)product.ProductId ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@ProductName", (object)product.ProductName ?? DBNull.Value);
